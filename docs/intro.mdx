@@ -1,0 +1,60 @@
+---
+sidebar_position: 1
+title: 教材编写指南
+---
+
+# 教材编写指南
+
+本页面向参与 PEBook（电力电子教材）建设的编写者，说明当前内容边界与站点工程的基本使用方式。本页不是教材章节，也不作为读者的学习入口。
+
+## 当前内容边界
+
+- 教材内容仍在建设中，尚未发布正式课程目录、章节正文、完整例题或练习。
+- 真正章节的教学结构、公式规范与内容体例留待首章任务确定，本页不提前定义。
+- 当前工程尚未接入 KaTeX 数学渲染链；如后续确有需要，应另行配置并验证，不能宣称现已支持公式渲染。
+
+## 环境要求
+
+- Node.js 20+
+
+## 安装与本地运行
+
+```bash
+npm ci
+npm run start
+```
+
+## 校验与构建
+
+```bash
+npm run typecheck
+npm run build
+```
+
+截至技术复审提交 `9e562b3`，以下结论已经确认：
+
+- 在 Node.js `v20.20.2`、npm `10.8.2` 的全新环境中，`npm ci`、`npm run typecheck` 与 `npm run build` 均通过。
+- Docusaurus `3.10.2` 能生成首页、本指南、404、sitemap 与静态资源；内部断链检查通过。
+- 首页明暗主题的关键文字对比度均达到普通文本 WCAG AA `4.5:1` 要求。
+
+文案变更实际合入后，仍应重新执行上述安装、类型检查与构建命令。
+
+## 目录约定
+
+- `docs/`：后续实际发布的教材目录与章节文档；当前不据此宣称已有课程内容。
+- `static/`：图片、图标与其他静态资源。
+- `src/pages/`：首页等独立页面。
+- `src/components/`：可复用页面组件。
+
+## GitHub Pages 发布边界
+
+当前配置面向 GitHub Pages 项目站点 `https://ycz87.github.io/PEBook/`，对应 `baseUrl: '/PEBook/'`。构建产物中的首页、文档、静态资源、内部链接与 sitemap 已按 `/PEBook/` 路径验证，受控静态服务测试返回 HTTP 200。
+
+真实 GitHub Pages 工作流与线上 URL 尚未验证；接入部署后仍需检查线上资源、内部链接与 404 路径。如果改为用户主页仓库或自定义域名，应同步调整 `url` 与 `baseUrl`。
+
+## 已知依赖风险
+
+- `npm ci` 仍会提示传递依赖 `uuid@8.3.2` 已弃用。
+- `npm audit --omit=dev` 当前报告 20 项 moderate 和 1 项 high。high 为间接依赖 `serialize-javascript@6.0.2` 的 `GHSA-5c6j-r48x-rmvq`，位于 Docusaurus 的构建工具链中，未进入 `build/` 静态产物。
+- 在构建输入仅来自受信任仓库的当前条件下，该 high 风险不阻塞 GitHub Pages 静态发布；若以后允许不可信代码或插件进入构建环境，或 CI 策略要求 high 清零，则应改判为发布阻塞项。
+- 不应直接执行 `npm audit fix --force`。依赖升级、上游修复或 `serialize-javascript@7.0.7` override 应作为独立安全变更评估并完整回归。
