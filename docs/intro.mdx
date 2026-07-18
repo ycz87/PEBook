@@ -16,19 +16,20 @@ sidebar_position: 1
 
 1. 在 `docs/` 下按章创建文档，例如 `chapter-01-overview.mdx`
 2. 将电路图、封面和插图放在 `static/img/`
-3. 如果需要数学公式，可直接在 MDX 中使用 KaTeX 语法
+3. 如果需要数学公式，可在后续按需接入 KaTeX 渲染链
 4. 在 `sidebars.ts` 中逐步细化章节导航
 
 ## 本地启动
 
 ```bash
-npm install
+npm ci
 npm run start
 ```
 
-## 生产构建
+## 校验与构建
 
 ```bash
+npm run typecheck
 npm run build
 ```
 
@@ -36,4 +37,4 @@ npm run build
 
 - 首页用于项目欢迎与导航，不承载长篇教材正文
 - 正文建议放在 `docs/`
-- 若以后接入部署，可直接指向 GitHub Pages
+- 如果以后以 GitHub Pages 项目站点部署 `PEBook`，路径应对应 `/PEBook/`

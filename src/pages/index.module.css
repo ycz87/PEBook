@@ -87,7 +87,36 @@
   border: 1px solid rgba(143, 79, 27, 0.12);
   border-radius: 20px;
   box-shadow: 0 18px 40px rgba(31, 41, 55, 0.08);
+  color: #1f2937;
   padding: 1.5rem;
+}
+
+[data-theme='dark'] .heroBanner {
+  background:
+    radial-gradient(circle at top left, rgba(242, 166, 94, 0.18), transparent 28%),
+    linear-gradient(135deg, #1c2129 0%, #161b22 48%, #11161c 100%);
+}
+
+[data-theme='dark'] .kicker,
+[data-theme='dark'] .panelLabel {
+  color: #f2a65e;
+}
+
+[data-theme='dark'] .heroTitle,
+[data-theme='dark'] .panelList,
+[data-theme='dark'] .quickCard {
+  color: #f3f4f6;
+}
+
+[data-theme='dark'] .heroSubtitle {
+  color: #d1d5db;
+}
+
+[data-theme='dark'] .heroPanel,
+[data-theme='dark'] .quickCard {
+  background: rgba(31, 41, 55, 0.92);
+  border-color: rgba(242, 166, 94, 0.18);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35);
 }
 
 @media screen and (max-width: 996px) {

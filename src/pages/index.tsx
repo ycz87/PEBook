@@ -63,10 +63,9 @@ function QuickStart() {
 }
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} | 欢迎`}
+      title="欢迎"
       description="电力电子教材 Docusaurus 站点欢迎页">
       <HomepageHeader />
       <main>

@@ -9,7 +9,7 @@
 ## 安装依赖
 
 ```bash
-npm install
+npm ci
 ```
 
 ## 本地开发
@@ -18,9 +18,10 @@ npm install
 npm run start
 ```
 
-## 生产构建
+## 校验与构建
 
 ```bash
+npm run typecheck
 npm run build
 ```
 
@@ -33,4 +34,4 @@ npm run build
 
 ## 部署提示
 
-如果后续使用 GitHub Pages，可基于 `docusaurus.config.ts` 里的 `organizationName`、`projectName` 和 `baseUrl` 继续接通部署。
+当前配置面向 GitHub Pages 项目站点 `https://ycz87.github.io/PEBook/`，因此 `docusaurus.config.ts` 使用 `baseUrl: '/PEBook/'`。如果后续改为用户主页仓库或自定义域名，需要同步调整 `url` 与 `baseUrl`。

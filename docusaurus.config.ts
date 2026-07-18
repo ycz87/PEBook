@@ -18,7 +18,7 @@ const config: Config = {
   url: 'https://ycz87.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/PEBook/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -41,8 +41,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl:
-            'https://github.com/ycz87/PEBook/tree/main/',
+          editUrl: 'https://github.com/ycz87/PEBook/tree/main/',
         },
         blog: false,
         theme: {
