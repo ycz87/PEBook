@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: '电力电子教材',
-  tagline: '用结构化文档组织课程章节、公式推导与教学资源',
+  tagline: '内容建设中，当前尚未发布正式教材章节',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -59,9 +59,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'PEBook',
+      title: '电力电子教材',
       logo: {
-        alt: '电力电子教材 Logo',
+        alt: '电力电子教材标志',
         src: 'img/logo.svg',
       },
       items: [
@@ -69,11 +69,11 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: '教材起步',
+          label: '教材编写指南',
         },
         {
           href: 'https://github.com/ycz87/PEBook',
-          label: 'GitHub',
+          label: 'GitHub 仓库',
           position: 'right',
         },
       ],
@@ -82,29 +82,29 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '导览',
           items: [
             {
-              label: '欢迎起始页',
+              label: '首页',
+              to: '/',
+            },
+            {
+              label: '教材编写指南',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'Project',
+          title: '参与编写',
           items: [
             {
               label: 'GitHub 仓库',
               href: 'https://github.com/ycz87/PEBook',
             },
-            {
-              label: '教材站点配置',
-              to: '/docs/intro',
-            },
           ],
         },
         {
-          title: 'Build',
+          title: '技术支持',
           items: [
             {
               label: 'Docusaurus',
@@ -117,7 +117,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} 电力电子教材. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} PEBook（电力电子教材）。基于 Docusaurus 构建。`,
     },
     prism: {
       theme: prismThemes.github,

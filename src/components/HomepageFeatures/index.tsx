@@ -11,29 +11,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: '章节结构清晰',
+    title: '内容状态明确',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        使用 <code>docs/</code>、侧边栏和 MDX 文档，可以快速搭建从绪论到专题章节的连续阅读路径。
+        当前交付的是经过技术验证的站点骨架与欢迎导览，不代表课程内容已经发布。
       </>
     ),
   },
   {
-    title: '适合教材内容扩展',
+    title: '读者路径独立',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        图像资源、实验说明、术语表与习题页都可以按目录演进，而不必先处理复杂站点基础设施。
+        正式章节发布前，本站不显示“开始学习”入口，也不把站点工程说明作为教材正文。
       </>
     ),
   },
   {
-    title: '保留工程化能力',
+    title: '编写入口清晰',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        首页和主题组件基于 React，可在后续按课程品牌、导航和互动需求继续深度定制。
+        参与编写者可从“教材编写指南”了解本地运行、校验与发布边界，并通过 GitHub 仓库协作。
       </>
     ),
   },
