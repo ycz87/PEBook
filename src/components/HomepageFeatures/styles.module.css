@@ -1,0 +1,24 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0 4rem;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 180px;
+  width: 180px;
+}
+
+.features :global(.col) {
+  margin-bottom: 1rem;
+}
+
+.features :global(.padding-horiz--md) {
+  background: #ffffff;
+  border: 1px solid rgba(143, 79, 27, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 18px 36px rgba(31, 41, 55, 0.06);
+  height: 100%;
+  padding: 1.25rem;
+}
